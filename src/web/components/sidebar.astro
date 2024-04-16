@@ -15,17 +15,23 @@ const sectionConfigs = Object.values(sections).map((section) => section.config);
 <nav
   id="sidebar"
   class:list={[
-    'hidden xl:flex flex-col w-max h-fit p-2 rounded-lg gap-2 bg-white dark:bg-gray-800 shadow-md',
+    'hidden xl:flex flex-col w-max h-fit p-2 rounded-lg gap-2 bg-primary-50 dark:bg-gray-800 shadow-md border-4 border-secondary-200 dark:border-secondary-800',
     className,
   ]}
 >
-  {sectionConfigs.filter((config) => config.visible).map((config) => <SidebarItem {...config} />)}
+  {
+    sectionConfigs
+      .filter((config) => config.visible)
+      .map((config) => <SidebarItem {...config} />)
+  }
 </nav>
 
 <script>
   import hashState from '@/web/utils/hash-state';
 
-  const sidebarItems = [...document.getElementById('sidebar')!.children] as HTMLAnchorElement[];
+  const sidebarItems = [
+    ...document.getElementById('sidebar')!.children,
+  ] as HTMLAnchorElement[];
 
   const setActiveItem = (hash: string) => {
     sidebarItems.forEach((item) => {

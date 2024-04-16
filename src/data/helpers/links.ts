@@ -20,6 +20,12 @@ link({ name: '...', url: '...' }) — returns link object with a custom name.
 
 // GENERAL
 
+export const resume = createLinkFactory({
+  name: 'Resume',
+  icon: 'ri:file-download-fill',
+  link: '/cv.pdf',
+});
+
 export const facebook = createLinkFactory({
   name: 'Facebook',
   icon: 'fa6-brands:facebook-f',

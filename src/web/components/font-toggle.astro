@@ -1,0 +1,30 @@
+---
+import Icon from './icon.astro';
+---
+
+<button
+  id="font-toggle"
+  aria-label="Font toggle"
+  class="fixed bottom-18 left-3 z-10 inline-flex h-12 w-12 items-center justify-center rounded-lg border-4 border-secondary-200 bg-primary-50 text-gray-400 shadow-xl transition focus:ring-primary-500 dark:border-secondary-800 dark:bg-gray-800 dark:text-gray-200"
+>
+  <Icon class="block dark:hidden" name="ri:text" size={20} />
+  <Icon class="hidden dark:block" name="ri:text" size={20} />
+</button>
+
+<script>
+  const fontToggle = document.getElementById('font-toggle')!;
+
+  const toggleFont = () => {
+    if (
+      document.getElementsByTagName('html')[0].style.fontFamily ===
+      '"Red Hat Display"'
+    ) {
+      document.getElementsByTagName('html')[0].style.fontFamily = 'Tilt Neon';
+    } else {
+      document.getElementsByTagName('html')[0].style.fontFamily =
+        'Red Hat Display';
+    }
+  };
+
+  fontToggle.addEventListener('click', toggleFont);
+</script>

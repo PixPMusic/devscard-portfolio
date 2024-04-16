@@ -2,7 +2,9 @@
 import type { LinkButton } from '@/types/shared';
 import Icon from './icon.astro';
 
-export interface Props extends Omit<LinkButton, 'url'>, Omit<astroHTML.JSX.HTMLAttributes, 'slot'> {
+export interface Props
+  extends Omit<LinkButton, 'url'>,
+    Omit<astroHTML.JSX.HTMLAttributes, 'slot'> {
   url?: LinkButton['url'];
   as?: 'a' | 'button';
 }
@@ -10,21 +12,39 @@ export interface Props extends Omit<LinkButton, 'url'>, Omit<astroHTML.JSX.HTMLA
 const { name, icon, url, as, ...props } = Astro.props;
 
 const classes = /* tw */ {
-  main: 'flex items-center justify-center w-7 h-7 rounded text-gray-400 bg-gray-100 dark:bg-gray-600 dark:text-gray-200',
+  main: 'flex items-center justify-center w-7 h-7 rounded text-gray-600 bg-primary-200 hover:bg-primary-300 dark:hover:bg-primary-800 dark:bg-secondary-800 dark:text-gray-200',
   active: 'active:translate-y-px',
-  focus: 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500',
+  focus:
+    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-200 dark:focus:ring-4 dark:focus:ring-offset-0 dark:focus:ring-primary-600',
+
+  /*'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500',*/
 };
 
 const Element = as || 'a';
 ---
 
-<Element
-  aria-label={name}
-  href={url}
-  target="_blank"
-  data-tooltip={name}
-  class:list={[classes.main, classes.active, classes.focus]}
-  {...props}
->
-  <Icon name={icon} size={16} />
-</Element>
+{
+  name !== 'Resume' ? (
+    <Element
+      aria-label={name}
+      href={url}
+      target="_blank"
+      data-tooltip={name}
+      class:list={[classes.main, classes.active, classes.focus]}
+      {...props}
+    >
+      <Icon name={icon} size={16} />
+    </Element>
+  ) : (
+    <Element
+      aria-label={name}
+      href={url}
+      download="CV-Alex_Jankowiak.pdf"
+      data-tooltip={name}
+      class:list={[classes.main, classes.active, classes.focus, 'sm:hidden']}
+      {...props}
+    >
+      <Icon name={icon} size={16} />
+    </Element>
+  )
+}

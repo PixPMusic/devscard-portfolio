@@ -2,7 +2,7 @@ import type { Section, Tag } from '../shared';
 
 export interface Skill extends Tag {}
 
-export type SkillLevel = 1 | 2 | 3 | 4 | 5;
+export type SkillLevel = 0 | 1 | 2 | 3 | 4 | 5;
 
 export interface LevelledSkill extends Skill {
   /**

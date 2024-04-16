@@ -6,12 +6,23 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: ['class'],
   theme: {
+    borderWidth: {
+      DEFAULT: '1px',
+      0: '0',
+      2: '2px',
+      3: '4px',
+      4: '3px',
+      6: '12px',
+      8: '16px',
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       white: colors.white,
-      primary: colors.indigo,
+      primary: colors.purple,
+      secondary: colors.sky,
       gray: colors.gray,
+      purple: colors.purple,
     },
     extend: {
       spacing: {
@@ -27,7 +38,11 @@ module.exports = {
         show: 'show 225ms ease-in-out',
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Tilt Neon', 'Red Hat Display', ...defaultTheme.fontFamily.sans],
+      },
+      screens: {
+        print: { raw: 'print' },
+        xs: '411px',
       },
     },
   },

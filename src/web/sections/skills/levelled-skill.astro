@@ -11,15 +11,24 @@ const { url, icon, iconColor, name, level, description } = Astro.props;
 const IconWrapper = url ? 'a' : 'div';
 ---
 
-<div class="flex flex-col gap-2">
-  <div class="flex h-5 items-center justify-between">
-    <IconWrapper class="flex h-5 gap-2" {...url && { href: url, target: '_blank', rel: 'noopener noreferrer' }}>
+<div
+  class="box-content flex w-full shrink basis-full flex-col gap-2 md:basis-1/3 lg:basis-1/4"
+>
+  <div class="box-content flex h-5 items-center justify-between">
+    <IconWrapper
+      class="box-content flex h-5 gap-2"
+      {...url && { href: url, target: '_blank', rel: 'noopener noreferrer' }}
+    >
       {icon && <Icon name={icon} color={iconColor} size={20} />}
       <Typography variant="skill">{name}</Typography>
     </IconWrapper>
     {
       description && (
-        <div class="flex h-3.5 w-3.5" data-tooltip={description} data-tooltip-placement="top">
+        <div
+          class="flex h-3.5 w-3.5"
+          data-tooltip={description}
+          data-tooltip-placement="top"
+        >
           <Icon name="fa6-solid:circle-info" color="#D1D5DB" size={14} />
         </div>
       )

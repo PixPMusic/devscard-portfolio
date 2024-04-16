@@ -1,82 +1,96 @@
 import type { ExperienceSection } from '@/types/sections/experience-section.types';
 import type { ReadonlyDeep } from 'type-fest';
-import { facebook, github, instagram, linkedin, twitter, website } from '../helpers/links';
+import { linkedin, website } from '../helpers/links';
 import {
-  chakraUi,
-  eslint,
-  firebase,
-  nextJs,
-  nx,
-  pnpm,
-  react,
-  reactQuery,
-  tailwindCss,
-  typescript,
-  vue,
+  apache,
+  nginx,
+  mysql,
+  php,
+  goLang,
+  java,
+  jira,
+  tomcat,
+  podman,
+  nodeJs,
+  perl,
+  postgreSql,
+  python,
+  wordpress,
+  redhat,
+  redis,
+  ubuntu,
+  openstack,
 } from '../helpers/skills';
 
 const experienceSectionData = {
   config: {
-    title: 'Work experience',
+    title: 'Experience',
     slug: 'experience',
     icon: 'fa6-solid:suitcase',
     visible: true,
   },
   jobs: [
     {
-      role: 'Senior front-end developer',
-      company: 'Google',
-      image: import('@/assets/logos/google-logo.jpg'),
-      dates: [new Date('2020-02'), null],
+      role: 'Technical Support Engineer II',
+      company: 'cPanel • Houston, TX',
+      image: import('@/assets/logos/cpanel.jpeg'),
+      dates: [new Date('2020-01-06'), new Date('2024-04-12')],
       description: `
-        - In tristique vulputate augue vel egestas.
-        - Quisque ac imperdiet tortor, at lacinia ex.
-        - Duis vel ex hendrerit, commodo odio sed, aliquam enim.
-        - Ut arcu nulla, tincidunt eget arcu eget, molestie vulputate nisi.
-        - Nunc malesuada leo et est iaculis facilisis.
-        - Fusce eu urna ut magna malesuada fringilla.
+        - Write and maintain support documentation for customer-driven solutions.
+        - Provide fast, accurate support to end users.
+        - Identify and debug product issues on customer systems.
+        - Create accurate reproduction steps in testing environments.
+        - Contribute to internal guides and documentation to promote knowledge sharing among team members.
+        - Deliver detailed casework to Development, including researched solutions where possible.
+        - Assist development of internal tools (Python, Go, Perl, Bash).
       `,
       tagsList: {
         title: 'Technologies',
-        tags: [react(), nextJs(), typescript(), nx(), firebase()],
+        tags: [
+          redhat(),
+          ubuntu(),
+          apache(),
+          nginx(),
+          mysql(),
+          php(),
+          postgreSql(),
+          redis(),
+          podman(),
+          nodeJs(),
+          python(),
+          java(),
+          tomcat(),
+          goLang(),
+          perl(),
+          wordpress(),
+          openstack(),
+          jira(),
+        ],
       },
-      links: [facebook({ url: '#' }), linkedin({ url: '#' })],
+      links: [
+        website({ url: 'https://cpanel.net' }),
+        linkedin({ url: 'https://www.linkedin.com/company/cpanel/' }),
+      ],
     },
     {
-      role: 'React.js developer',
-      company: 'Facebook',
-      image: import('@/assets/logos/facebook-logo.png'),
-      dates: [new Date('2019-04'), new Date('2020-02')],
+      role: 'Barista',
+      company: 'Starbucks • Ann Arbor, MI',
+      image: import('@/assets/logos/starbucks.jpg'),
+      dates: [new Date('2018-11'), new Date('2019-12-25')],
       description: `
-        - Aenean eget ultricies felis. Pellentesque dictum massa ut tellus eleifend, sed posuere massa mattis.
-        - Ut posuere massa lacus, eleifend molestie tortor auctor vel.
-        - Sed sed sollicitudin eros, id ultricies mi. Aliquam sodales elit vel ante tempor, non vehicula nibh facilisis.
-        - Cras feugiat ultricies maximus. Aliquam tristique ex odio, ac semper urna accumsan a.
+        - Package and install Java into a variety of containers.
+        - Provide fast, accurate service to customers.
+        - Identify and debug product issues and customer complaints.
+        - Assist team members by proactively identifying needs and providing support.
       `,
       tagsList: {
-        title: 'Technologies',
-        tags: [react(), reactQuery(), chakraUi(), eslint()],
+        title: '',
+        tags: [],
       },
-      links: [website({ url: '#' }), instagram({ url: '#' })],
-    },
-    {
-      role: 'Junior front-end developer',
-      company: 'GitLab',
-      image: import('@/assets/logos/gitlab-logo.png'),
-      dates: [new Date('2016-09'), new Date('2019-04')],
-      description: `
-        Nulla volutpat justo ante, rhoncus posuere massa egestas in:
-
-        - Quisque pellentesque, dolor nec sollicitudin iaculis, sem velit consequat ligula, eget tempus ligula leo et est.
-        - Maecenas ut elit sit amet nibh maximus condimentum in nec lorem. Pellentesque tincidunt odio vel leo suscipit, in interdum mi gravida.
-
-        Donec non vulputate augue 🤓
-      `,
-      tagsList: {
-        title: 'Technologies',
-        tags: [vue(), tailwindCss(), pnpm()],
-      },
-      links: [twitter({ url: '#' }), github({ url: '#' })],
+      links: [
+        website({ url: 'https://starbucks.com' }),
+        linkedin({ url: 'https://www.linkedin.com/company/starbucks/' }),
+      ],
     },
   ],
 } as const satisfies ReadonlyDeep<ExperienceSection>;

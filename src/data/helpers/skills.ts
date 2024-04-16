@@ -18,11 +18,193 @@ skill({ description: '...' }) — returns skill with a description displayed whe
 
 */
 
-export const apolloGraphql = createSkillFactory({
-  name: 'Apollo GraphQL',
-  icon: 'simple-icons:apollographql',
-  iconColor: '#311C87',
-  url: 'https://www.apollographql.com/',
+export const cPanel = createSkillFactory({
+  name: 'cPanel',
+  icon: 'simple-icons:cpanel',
+  iconColor: '#FF6C2C',
+  url: 'https://cpanel.net/',
+});
+
+export const containers = createSkillFactory({
+  name: 'Containers',
+  icon: 'pajamas:container-image',
+  iconColor: '#4B66AD',
+  url: 'https://containerd.io/',
+});
+
+export const docker = createSkillFactory({
+  name: 'Docker',
+  icon: 'simple-icons:docker',
+  iconColor: '#2496ED',
+  url: 'https://www.docker.com/',
+});
+
+export const python = createSkillFactory({
+  name: 'Python',
+  icon: 'simple-icons:python',
+  iconColor: '#3776AB',
+  url: 'https://www.python.org/',
+});
+
+export const linux = createSkillFactory({
+  name: 'Linux',
+  icon: 'simple-icons:linux',
+  iconColor: '#FCC624',
+  url: 'https://www.linux.org/',
+});
+
+export const kubernetes = createSkillFactory({
+  name: 'Kubernetes',
+  icon: 'simple-icons:kubernetes',
+  iconColor: '#326CE5',
+  url: 'https://kubernetes.io/',
+});
+
+export const ceph = createSkillFactory({
+  name: 'Ceph',
+  icon: 'simple-icons:ceph',
+  iconColor: '#005F9E',
+  url: 'https://ceph.io/',
+});
+
+export const teraform = createSkillFactory({
+  name: 'Terraform',
+  icon: 'simple-icons:terraform',
+  iconColor: '#623CE4',
+  url: 'https://www.terraform.io/',
+});
+
+export const ansible = createSkillFactory({
+  name: 'Ansible',
+  icon: 'simple-icons:ansible',
+  iconColor: '#EE0000',
+  url: 'https://www.ansible.com/',
+});
+
+export const fedora = createSkillFactory({
+  name: 'Fedora',
+  icon: 'simple-icons:fedora',
+  iconColor: '#294172',
+  url: 'https://getfedora.org/',
+});
+
+export const osTree = createSkillFactory({
+  name: 'OSTree',
+  icon: 'simple-icons:fedora',
+  iconColor: '#294172',
+  url: 'https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/package-management/rpm-ostree/',
+});
+
+export const openTofu = createSkillFactory({
+  name: 'OpenTofu',
+  icon: 'simple-icons:opentofu',
+  iconColor: '#FF6C2C',
+  url: 'https://opentofu.com/',
+});
+
+export const apache = createSkillFactory({
+  name: 'Apache',
+  icon: 'simple-icons:apache',
+  iconColor: '#D22128',
+  url: 'https://httpd.apache.org/',
+});
+
+export const nginx = createSkillFactory({
+  name: 'NGINX',
+  icon: 'simple-icons:nginx',
+  iconColor: '#269539',
+  url: 'https://www.nginx.com/',
+});
+
+export const mysql = createSkillFactory({
+  name: 'MySQL',
+  icon: 'simple-icons:mysql',
+  iconColor: '#4479A1',
+  url: 'https://www.mysql.com/',
+});
+
+export const redis = createSkillFactory({
+  name: 'Redis',
+  icon: 'simple-icons:redis',
+  iconColor: '#DC382D',
+  url: 'https://redis.io/',
+});
+
+export const perl = createSkillFactory({
+  name: 'Perl',
+  icon: 'simple-icons:perl',
+  iconColor: '#39457E',
+  url: 'https://www.perl.org/',
+});
+
+export const php = createSkillFactory({
+  name: 'PHP',
+  icon: 'simple-icons:php',
+  iconColor: '#777BB4',
+  url: 'https://www.php.net/',
+});
+
+export const podman = createSkillFactory({
+  name: 'Podman',
+  icon: 'simple-icons:podman',
+  iconColor: '#BD58DD',
+  url: 'https://podman.io/',
+});
+
+export const openstack = createSkillFactory({
+  name: 'OpenStack',
+  icon: 'simple-icons:openstack',
+  iconColor: '#ED1944',
+  url: 'https://www.openstack.org/',
+});
+
+export const wordpress = createSkillFactory({
+  name: 'WordPress',
+  icon: 'simple-icons:wordpress',
+  iconColor: '#21759B',
+  url: 'https://wordpress.org/',
+});
+
+export const goLang = createSkillFactory({
+  name: 'Go',
+  icon: 'simple-icons:go',
+  iconColor: '#00ADD8',
+  url: 'https://golang.org/',
+});
+
+export const java = createSkillFactory({
+  name: 'Java',
+  icon: 'fa6-brands:java',
+  iconColor: '#007396',
+  url: 'https://www.java.com/',
+});
+
+export const tomcat = createSkillFactory({
+  name: 'Apache Tomcat',
+  icon: 'simple-icons:apachetomcat',
+  iconColor: '#F8DC75',
+  url: 'http://tomcat.apache.org/',
+});
+
+export const redhat = createSkillFactory({
+  name: 'Enterprise Linux',
+  icon: 'simple-icons:redhat',
+  iconColor: '#EE0000',
+  url: 'https://www.redhat.com/',
+});
+
+export const ubuntu = createSkillFactory({
+  name: 'Ubuntu',
+  icon: 'simple-icons:ubuntu',
+  iconColor: '#E95420',
+  url: 'https://ubuntu.com/',
+});
+
+export const nodeJs = createSkillFactory({
+  name: 'Node.js',
+  icon: 'simple-icons:nodedotjs',
+  iconColor: '#339933',
+  url: 'https://nodejs.org/',
 });
 
 export const astro = createSkillFactory({
@@ -107,6 +289,20 @@ export const postgreSql = createSkillFactory({
   icon: 'simple-icons:postgresql',
   iconColor: '#4169E1',
   url: 'https://www.postgresql.org/',
+});
+
+export const graphql = createSkillFactory({
+  name: 'GraphQL',
+  icon: 'simple-icons:graphql',
+  iconColor: '#E10098',
+  url: 'https://graphql.org/',
+});
+
+export const jira = createSkillFactory({
+  name: 'Jira',
+  icon: 'simple-icons:jira',
+  iconColor: '#0052CC',
+  url: 'https://www.atlassian.com/software/jira',
 });
 
 export const prettier = createSkillFactory({

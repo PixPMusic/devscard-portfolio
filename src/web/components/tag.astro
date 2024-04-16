@@ -7,17 +7,17 @@ export interface Props extends Tag {}
 
 const { name, description, icon, iconColor, url } = Astro.props;
 
-const className = /* tw */ 'flex h-6 w-fit items-center gap-x-1.5 rounded bg-gray-100 px-2.5 dark:bg-gray-700';
+const className = /* tw */ 'flex h-6 w-fit items-center gap-x-1.5 rounded';
 const customProps = url
   ? ({
       href: url,
       as: 'a',
       target: '_blank',
       rel: 'noopener noreferrer',
-      class: `${className} hover:bg-gray-200 dark:hover:bg-gray-600`,
+      class: `${className} hover:bg-primary-200 dark:hover:bg-primary-800 bg-primary-100 px-2.5 dark:bg-secondary-900`,
     } as const)
   : {
-      class: className,
+      class: `${className} bg-secondary-100 px-2.5 dark:bg-primary-800 hover:bg-primary-100 dark:hover:bg-secondary-800`,
     };
 ---
 

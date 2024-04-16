@@ -5,7 +5,7 @@ import Icon from './icon.astro';
 <button
   id="theme-toggle"
   aria-label="Theme toggle"
-  class="fixed bottom-3 left-3 z-10 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-400 shadow-xl transition focus:ring-primary-500 dark:bg-gray-600 dark:text-gray-200"
+  class="fixed bottom-3 left-3 z-10 inline-flex h-12 w-12 items-center justify-center rounded-lg border-4 border-secondary-200 bg-primary-50 text-gray-400 shadow-xl transition focus:ring-primary-500 dark:border-secondary-800 dark:bg-gray-800 dark:text-gray-200"
 >
   <Icon class="block dark:hidden" name="ri:moon-fill" size={20} />
   <Icon class="hidden dark:block" name="ri:sun-line" size={20} />
@@ -17,13 +17,17 @@ import Icon from './icon.astro';
   const toggleTheme = () => {
     const theme = localStorage.getItem('theme') ?? 'light';
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    const themeMeta = document.getElementsByName('theme-color') as NodeListOf<HTMLMetaElement>;
+    const themeMeta = document.getElementsByName(
+      'theme-color'
+    ) as NodeListOf<HTMLMetaElement>;
 
     if (themeMeta[0]) {
       themeMeta[0].content = newTheme === 'dark' ? '#1a202c' : '#ffffff';
     }
 
-    document.documentElement.classList[newTheme === 'dark' ? 'add' : 'remove']('dark');
+    document.documentElement.classList[newTheme === 'dark' ? 'add' : 'remove'](
+      'dark'
+    );
     localStorage.setItem('theme', newTheme);
   };
 
