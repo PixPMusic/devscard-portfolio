@@ -79,7 +79,7 @@ const skillsSectionData = {
         php({
           level: 1,
           description:
-            'Not an active PHP developer, but can read and understand PHP code, configuration Basic understanding of PHP, including debugging and troubleshooting.',
+            'Not an active PHP developer, but can read and understand PHP code and configurations. Basic understanding of PHP, including debugging and troubleshooting.',
         }),
         mysql({
           level: 1,

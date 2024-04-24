@@ -1,10 +1,11 @@
 ---
 import type { Photo } from '@/types/shared';
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 
 export interface Props {
   src: Photo;
   alt: string;
+  loading?: string;
   class?: string;
   width?: number;
   height?: number;
@@ -13,7 +14,10 @@ export interface Props {
 const { src, ...props } = Astro.props;
 
 const isRemoteImage = typeof src === 'string';
-const loading = import.meta.env.PUBLIC_APP_ENV === 'snapshot' ? 'eager' : 'lazy';
+const loading =
+  props.loading || import.meta.env.PUBLIC_APP_ENV === 'snapshot'
+    ? 'eager'
+    : 'lazy';
 ---
 
 {
