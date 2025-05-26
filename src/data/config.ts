@@ -11,7 +11,7 @@ const config = {
     },
   },
   meta: {
-    title: 'Alex Jankowiak - Technical Support Engineer',
+    title: 'Alex Jankowiak - Senior Technical Support Engineer',
     description: '',
     faviconPath: '/src/assets/me.png',
   },

@@ -11,7 +11,7 @@ const mainSectionData = {
   },
   image: import('@/assets/me.png'),
   fullName: 'Alex Jankowiak',
-  role: 'Technical Support Engineer',
+  role: 'Senior Technical Support Engineer',
   details: [
     {
       label: 'Email',

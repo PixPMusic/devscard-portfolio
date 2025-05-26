@@ -3,7 +3,8 @@ import * as path from 'node:path';
 import * as puppeteer from 'puppeteer';
 import { pdfPage } from 'puppeteer-report';
 
-const waitFor = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+const waitFor = (ms: number) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 const goTo = async (page: puppeteer.Page, url: string) => {
   await page.goto(url, { waitUntil: 'networkidle0' });
@@ -17,7 +18,11 @@ interface RetryOptions {
   retryTime: number;
 }
 
-const retry = async ({ promise, retries, retryTime }: RetryOptions): GoToReturn => {
+const retry = async ({
+  promise,
+  retries,
+  retryTime,
+}: RetryOptions): GoToReturn => {
   try {
     return await promise();
   } catch (error) {
@@ -32,14 +37,14 @@ const retry = async ({ promise, retries, retryTime }: RetryOptions): GoToReturn 
 const main = async () => {
   const child = exec('npm run dev');
 
-  const browser = await puppeteer.launch({ headless: 'new' });
+  const browser = await puppeteer.launch({ headless: 'shell' });
 
   const page = await browser.newPage();
 
   await page.setViewport({ width: 794, height: 1122, deviceScaleFactor: 2 });
 
   await retry({
-    promise: () => goTo(page, 'http://localhost:3000/pdf'),
+    promise: () => goTo(page, 'http://localhost:4321/pdf'),
     retries: 5,
     retryTime: 1000,
   });

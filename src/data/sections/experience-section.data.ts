@@ -19,7 +19,15 @@ import {
   redhat,
   redis,
   ubuntu,
+  cuda,
   openstack,
+  docker,
+  teraform,
+  kubernetes,
+  ceph,
+  ansible,
+  typescript,
+  hubSpot,
 } from '../helpers/skills';
 
 const experienceSectionData = {
@@ -30,6 +38,46 @@ const experienceSectionData = {
     visible: true,
   },
   jobs: [
+    {
+      role: 'Senior Technical Support Engineer',
+      company: 'Hyperstack | NexGen Cloud - Remote',
+      image: import('@/assets/logos/nexgen.jpeg'),
+      dates: [new Date('2024-06-13'), new Date('2025-05-16')],
+      description: `
+      - Develop Help Center integrations to support business operations.
+      - Create and maintain detailed support documentation for customer-centric solutions.
+      - Write and develop internal documentation and processes for efficient and consistent support.
+      - Encourage and facilitate knowledge-sharing amongst team members.
+      - Provide prompt and accurate assistance to end users.
+      - Investigate and resolve product issues encountered in production environments.
+      - Develop precise reproduction steps for issues in testing environments.
+      - Deliver comprehensive case reports to Development, including detailed analysis and identification of problematic code.
+      - Contribute to the development of internal tools using technologies such as Python, Go, TypeScript, Bash, and Docker.
+      `,
+      tagsList: {
+        title: 'Technologies',
+        tags: [
+          openstack(),
+          ubuntu(),
+          cuda(),
+          docker(),
+          hubSpot(),
+          nodeJs(),
+          python(),
+          goLang(),
+          jira(),
+          teraform(),
+          kubernetes(),
+          ceph(),
+          ansible(),
+          typescript(),
+        ],
+      },
+      links: [
+        website({ url: 'https://nexgencloud.com' }),
+        linkedin({ url: 'https://www.linkedin.com/company/nexgencloud/' }),
+      ],
+    },
     {
       role: 'Technical Support Engineer II',
       company: 'cPanel • Houston, TX',

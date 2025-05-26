@@ -23,6 +23,7 @@ import {
   podman,
   openstack,
   typescript,
+  hubSpot,
 } from '../helpers/skills';
 
 const skillsSectionData = {
@@ -34,7 +35,7 @@ const skillsSectionData = {
   },
   skillSets: [
     {
-      title: 'I already know',
+      title: "I'm familiar with",
       skills: [
         cPanel({
           level: 4,
@@ -56,6 +57,11 @@ const skillsSectionData = {
           description:
             'Experience with Skopeo, Buildah, and Podman for container management and deployment.',
         }),
+        hubSpot({
+          level: 3,
+          description:
+            "Intimatly familiar with HubSpot's API structure and Help Desk functionality.",
+        }),
         apache({
           level: 3,
           description:
@@ -67,14 +73,14 @@ const skillsSectionData = {
             'Prior experience with GoLang. Can write basic Go applications, including concurrency and error handling. Basic understanding of the GoLang build process.',
         }),
         docker({
-          level: 2,
+          level: 3,
           description:
             'Experience with Docker and Docker-Compose. More experienced with the Open Container Initiative stack than the Docker stack.',
         }),
         openstack({
-          level: 2,
+          level: 3,
           description:
-            'No direct management experience, but have worked heavily with the OpenStack API and CLI. Can deploy and manage OpenStack instances and troubleshoot issues.',
+            'No deployment experience, but have worked heavily with the OpenStack API and CLI. Can deploy and manage OpenStack instances and troubleshoot issues.',
         }),
         php({
           level: 1,
@@ -110,7 +116,7 @@ const skillsSectionData = {
       ],
     },
     {
-      title: 'I want to learn',
+      title: 'I want to learn more about',
       skills: [
         typescript(),
         graphql(),

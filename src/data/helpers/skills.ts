@@ -18,6 +18,20 @@ skill({ description: '...' }) — returns skill with a description displayed whe
 
 */
 
+export const cuda = createSkillFactory({
+  name: 'CUDA',
+  icon: 'simple-icons:nvidia',
+  iconColor: '#76B900',
+  url: 'https://nvidia.com',
+});
+
+export const hubSpot = createSkillFactory({
+  name: 'HubSpot',
+  icon: 'simple-icons:hubspot',
+  iconColor: '#f57722',
+  url: 'https://hubspot.com/',
+});
+
 export const cPanel = createSkillFactory({
   name: 'cPanel',
   icon: 'simple-icons:cpanel',
