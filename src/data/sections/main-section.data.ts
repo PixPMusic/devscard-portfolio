@@ -18,7 +18,7 @@ const mainSectionData = {
       value: 'me@pixp.cc',
       url: 'mailto:me@pixp.cc',
     },
-    { label: 'Location', value: 'Houston, TX' },
+    { label: 'Location', value: 'Seattle, WA' },
   ],
   pdfDetails: [
     { label: 'Email', value: 'me@pixp.cc' },
